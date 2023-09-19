@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex project</title>
+    <style>
+        /* .image {
+            display: flex;
+           
+            gap: 14px;
+            width: 100%;
+        } */
+
+        img {
+            border: .5px solid rgba(237, 120, 99, 0.775);
+            box-shadow: 1px 1px 5px rgba(237, 120, 99, 0.775);
+            width: 100%;
+            height: auto;
+         
+
+        }
+        .image-container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap:15px;
+        }
+        .colume1,.colume2,.colume3{
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+        }
+  
+        .image{
+            position: relative;
+            
+        }
+        .order-container{
+            
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        .borde{
+        
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            width: 100%;
+            height: 80px;
+            background-color: aliceblue;
+            padding: 10px 0;
+            opacity: 0;
+            transition:opacity 1.2s ease-out;
+           
+        }
+        .borde button{
+       
+            padding: 10px 15px;
+            background-color: rgb(18, 18, 18);
+            border: 0;
+            border-radius: 7px;
+            font-size: 16px;
+            font-weight: 700;
+            color: rgb(253, 253, 253);
+            opacity: 0;
+            transform: scale(.5,.5);
+            transform-origin: 50% 50% ;
+            transform: translatex(-40px);
+            transition:opacity 1s ease-in,  transform 1s ease-in, background-color 1s ease-in;
+      
+            box-shadow: 1px 1px 5px rgb(255, 234, 71);
+         
+        }
+        .image:hover .order-container {
+            display: block;   
+        }
+        .image:hover .order-container .borde{
+           opacity: 1;
+        }
+        .image:hover .order-container .borde button{
+          transform: scale(1,1);
+          
+          opacity: 1;
+          background-color: tomato;
+        }
+       
+        /* .colume1 > .image:hover button{
+            display: block;
+            position: absolute;
+            transition: ease-in 2s;
+            right: 20px;
+       
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="image-container">
+        <div class="colume1"> 
+          
+                <div class="image">
+
+                    <img src="image/1.jpg" alt="">
+                    <div class="order-container">
+                        <div class="borde"><button>Order Now</button></div>
+                    </div>
+                   
+                    
+                </div>
+                <div class="image">
+
+                    <img src="image/2.jpg" alt="">
+                    <div class="order-container">
+                        <div class="borde"><button>Order Now</button></div>
+                    </div>
+                   
+                    
+                </div>   <div class="image">
+
+                    <img src="image/3.jpg" alt="">
+                    <div class="order-container">
+                        <div class="borde"><button>Order Now</button></div>
+                    </div>
+                   
+                    
+                </div>   <div class="image">
+
+                    <img src="image/4.jpg" alt="">
+                    <div class="order-container">
+                        <div class="borde"><button>Order Now</button></div>
+                    </div>
+                   
+                    
+                </div>   <div class="image">
+
+                    <img src="image/5.jpg" alt="">
+                    <div class="order-container">
+                        <div class="borde"><button>Order Now</button></div>
+                    </div>
+                   
+                    
+                </div>   <div class="image">
+
+                    <img src="image/6.jpg" alt="">
+                    <div class="order-container">
+                        <div class="borde"><button>Order Now</button></div>
+                    </div>
+                   
+                    
+                </div>   <div class="image">
+
+                    <img src="image/7.jpg" alt="">
+                    <div class="order-container">
+                        <div class="borde"><button>Order Now</button></div>
+                    </div>
+                   
+                    
+                </div>   <div class="image">
+
+                    <img src="image/8.jpg" alt="">
+                    <div class="order-container">
+                        <div class="borde"><button>Order Now</button></div>
+                    </div>
+                   
+                    
+                </div>
+           
+          
+          
+
+        </div>
+        <div class="colume2">
+            <img src="image/9.jpg" alt="">
+            <img src="image/10.jpg" alt="">
+            <img src="image/11.jpg" alt="">
+            <img src="image/12.jpg" alt="">
+            <img src="image/13.jpg" alt="">
+            <img src="image/14.jpg" alt="">
+            
+        </div>
+        <div class="colume2">
+            <img src="image/6.jpg" alt="">
+            <img src="image/7.jpg" alt="">
+            <img src="image/8.jpg" alt="">
+            
+            <img src="image/17.jpg" alt="">
+            <img src="image/18.jpg" alt="">
+            <img src="image/19.jpg" alt="">
+            <img src="image/20.jpg" alt="">
+        </div>
+     
+    </div>
+</body>
+
+</html>
